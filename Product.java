@@ -3,9 +3,9 @@ import java.util.Scanner;
 
  class Product {
      //Instance variables
-     private int product_id;
-     private String product_name;
-     private int product_price;
+      int product_id;
+      String product_name;
+      int product_price;
      
      //default constructor
      Product(){
@@ -44,11 +44,6 @@ import java.util.Scanner;
 		this.product_price = product_price;
 	}
 
-	@Override
-	public String toString() {
-		return "product_id=" + product_id + "\t product_name=" + product_name + "\tproduct_price="
-				+ product_price;
-	}
 
 	void show_Product_Details(){
          System.out.println("Product ID    :- "+product_id);
@@ -56,20 +51,5 @@ import java.util.Scanner;
          System.out.println("Product Price :- "+product_price);
      }
      
-     public static void main(String [] args) {
-    	 Scanner sc=new Scanner(System.in);
-    	 Product product1=new Product(101,"IphoneX",70000);
-    	 System.out.println(product1);
-    	 System.out.println("Enter Product Id:-");
-    	 int product_id=sc.nextInt();
-    	 sc.nextLine();
-    	 System.out.println("Enter Product Name:-");
-    	 String product_name=sc.nextLine();
-    	 System.out.println("Enter Product Price:-");
-    	 int product_price=sc.nextInt();
-    	 Product product2=new Product(product_id,product_name,product_price);
-    	 product2.show_Product_Details();
-    	 //display price of particular product
-    	 System.out.println("Price of IphoneX : "+product1.getProduct_price());
-     }
+  
  }
